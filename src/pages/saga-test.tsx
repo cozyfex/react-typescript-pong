@@ -2,7 +2,7 @@ import React, { useCallback } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { sampleRequestAction } from '../store/actions/sample';
 import { RootState } from '../store/reducers';
-import { Link } from 'react-router-dom';
+import withLayout from '../hoc/withLayout';
 
 const SagaTest = () => {
   const dispatch = useDispatch();
@@ -21,7 +21,6 @@ const SagaTest = () => {
     <div>
       <button onClick={onClickHero('superman')}>슈퍼맨</button>
       <button onClick={onClickHero('batman')}>배트맨</button>
-      <Link to="/">Go to Index</Link>
       {title && <div>{title}</div>}
       <br/>
       {contents && (
@@ -40,4 +39,4 @@ const SagaTest = () => {
   );
 };
 
-export default SagaTest;
+export default React.memo(withLayout(SagaTest));

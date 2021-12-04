@@ -1,11 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import App from './App';
 import reportWebVitals from './reportWebVitals';
-import configureStore from './store';
 import { Provider } from 'react-redux';
 import { HashRouter } from 'react-router-dom';
 import { HelmetProvider } from 'react-helmet-async';
+import App from './App';
+import configureStore from './store';
 
 const store = configureStore();
 

@@ -1,11 +1,12 @@
-import { Link } from 'react-router-dom';
+import React from 'react';
+import withLayout from '../hoc/withLayout';
 
 const Index = () => {
   return (
     <div>
-      <Link to={'/saga-test'}>Saga Test</Link>
+      Index
     </div>
   );
 };
 
-export default Index;
+export default React.memo(withLayout(Index, { index: true }));
