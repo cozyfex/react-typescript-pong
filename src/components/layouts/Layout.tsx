@@ -1,15 +1,15 @@
 import React from 'react';
 import Menu from '../Menu';
 
-export interface IWithLayout {
+export interface WithLayoutInterface {
   index?: boolean;
 }
 
-export interface ILayout extends IWithLayout {
+export interface LayoutInterface extends WithLayoutInterface {
   children: React.ReactNode;
 }
 
-const Layout = (props: ILayout) => {
+const Layout = (props: LayoutInterface) => {
   const { children, index } = props;
 
   return (
