@@ -8,6 +8,9 @@ const Menu = () => {
         <Link to={'/'}>Index</Link>
       </li>
       <li>
+        <Link to={'/pong'}>Pong</Link>
+      </li>
+      <li>
         <Link to={'/saga-test'}>Saga Test</Link>
       </li>
     </ul>
